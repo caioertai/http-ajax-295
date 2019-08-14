@@ -11,7 +11,7 @@ const buildMovieTag = (movieObject) => {
       <p>${movieObject.Title}</p>
     </li>
   `
-}
+};
 
 // Defines the behaviour of the form
 const formSubmit = (event) => {
@@ -19,7 +19,7 @@ const formSubmit = (event) => {
 
   const query = searchInput.value;
   fetchMovies(query);
-}
+};
 
 // Insert movie HTML tag in the page
 const insertMovieHTML = movie => moviesList.insertAdjacentHTML('beforeEnd', buildMovieTag(movie));
@@ -36,8 +36,8 @@ const fetchMovies = (query) => {
       moviesList.innerHTML = '';
       movies.forEach(insertMovieHTML);
     });
-}
+};
 
 // Calling the functions to initialize the page
-searchForm.addEventListener('submit', formSubmit)
-fetchMovies('harry')
+searchForm.addEventListener('submit', formSubmit);
+fetchMovies('harry');
